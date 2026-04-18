@@ -1,0 +1,85 @@
+/* =========================================
+   BLOG — Waqashi Global Consulting
+   ========================================= */
+.blog {
+  padding: var(--section-pad);
+  background: var(--white);
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.blog-card {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  transition: box-shadow var(--transition-normal),
+              transform var(--transition-normal);
+  cursor: pointer;
+  background: #fff;
+}
+.blog-card:hover {
+  box-shadow: var(--shadow-card);
+  transform: translateY(-5px);
+}
+
+/* Image area */
+.blog-img {
+  height: 210px;
+  position: relative;
+  overflow: hidden;
+}
+.blog-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.blog-card:hover .blog-img img { transform: scale(1.04); }
+
+.blog-cat {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--red);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* Body area */
+.blog-body  { padding: 24px; }
+.blog-date  { font-size: 12px; color: var(--gray); margin-bottom: 10px; }
+
+.blog-title-text {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  color: var(--dark);
+}
+.blog-excerpt {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+.blog-read {
+  color: var(--red);
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap var(--transition-fast);
+}
+.blog-read:hover { gap: 10px; }

@@ -1,0 +1,176 @@
+/* =========================================
+   HERO — Waqashi Global Consulting
+   ========================================= */
+.hero {
+  min-height: 100vh;
+  background: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 80px 5% 60px;
+}
+
+/* Background gradients */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 50% 110%, rgba(224, 60, 42, 0.15) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 80% 10%, rgba(224, 60, 42, 0.07) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Decorative rings */
+.hero-deco {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid rgba(224, 60, 42, 0.1);
+  animation: expandRing 6s ease-in-out infinite;
+  pointer-events: none;
+}
+.hero-deco:nth-child(1) { width: 600px; height: 600px; top: -150px; right: -150px; animation-delay: 0s; }
+.hero-deco:nth-child(2) { width: 400px; height: 400px; bottom: -100px; left: -100px; animation-delay: 3s; }
+
+@keyframes expandRing {
+  0%, 100% { transform: scale(1); opacity: 0.1; }
+  50%       { transform: scale(1.06); opacity: 0.18; }
+}
+
+/* Inner grid layout */
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Text side */
+.hero-text {
+  animation: fadeUp 0.8s ease both;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(224, 60, 42, 0.12);
+  border: 1px solid rgba(224, 60, 42, 0.25);
+  color: #e8a87c;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 30px;
+  margin-bottom: 22px;
+}
+.hero-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--red);
+  border-radius: 50%;
+  animation: blink 1.5s ease infinite;
+  flex-shrink: 0;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 66px);
+  color: var(--white);
+  line-height: 1.08;
+  margin-bottom: 20px;
+}
+.hero-title .accent { color: var(--red); }
+
+.hero-sub {
+  font-size: 16px;
+  color: #aaa;
+  margin-bottom: 36px;
+  line-height: 1.7;
+  max-width: 480px;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Logo side */
+.hero-logo-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeUp 0.8s 0.2s ease both;
+}
+
+.hero-logo-circle {
+  width: clamp(220px, 36vw, 460px);
+  height: clamp(220px, 36vw, 460px);
+  background: var(--cream);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  box-shadow:
+    0 0 0 16px rgba(245, 240, 232, 0.06),
+    0 20px 60px rgba(0, 0, 0, 0.5);
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-14px); }
+}
+
+.logo-wa {
+  font-family: var(--font-display);
+  font-size: clamp(50px, 8vw, 100px);
+  color: var(--red);
+  line-height: 1;
+  font-style: italic;
+  font-weight: 900;
+}
+.logo-name {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 3.5vw, 48px);
+  color: var(--dark);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+.logo-banner {
+  background: var(--dark);
+  color: var(--cream);
+  font-size: clamp(9px, 1.3vw, 15px);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  padding: 8px 22px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.logo-tagline {
+  color: var(--red);
+  font-size: clamp(7px, 1vw, 12px);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}

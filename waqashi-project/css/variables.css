@@ -1,0 +1,33 @@
+/* =========================================
+   VARIABLES — Waqashi Global Consulting
+   ========================================= */
+:root {
+  /* Brand Colors */
+  --red:        #e03c2a;
+  --red-dark:   #c0321f;
+  --red-light:  #f5ebe9;
+  --cream:      #f5f0e8;
+  --dark:       #1a1a1a;
+  --dark2:      #2a2a2a;
+  --gray:       #555;
+  --white:      #fff;
+
+  /* Typography */
+  --font-display: 'Playfair Display', serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  /* Spacing */
+  --section-pad:   100px 5%;
+  --section-pad-sm: 60px 5%;
+  --max-width:     1200px;
+
+  /* Transitions */
+  --transition-fast:   0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow:   0.65s ease;
+
+  /* Shadows */
+  --shadow-red:    0 4px 20px rgba(224, 60, 42, 0.35);
+  --shadow-red-lg: 0 8px 28px rgba(224, 60, 42, 0.45);
+  --shadow-card:   0 12px 40px rgba(0, 0, 0, 0.1);
+}

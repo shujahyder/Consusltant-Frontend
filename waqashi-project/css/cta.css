@@ -1,0 +1,89 @@
+/* =========================================
+   CTA STRIP — Waqashi Global Consulting
+   ========================================= */
+.cta-strip {
+  background: var(--dark);
+  padding: 0 5%;
+}
+
+.cta-strip-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 36px 0;
+}
+
+.cta-card {
+  background: var(--red);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 26px 30px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform var(--transition-fast),
+              box-shadow var(--transition-fast);
+}
+.cta-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(224, 60, 42, 0.4);
+}
+.cta-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+  pointer-events: none;
+}
+
+.cta-card-icon {
+  width: 54px;
+  height: 54px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.cta-card-icon svg {
+  width: 26px;
+  height: 26px;
+  fill: #fff;
+}
+
+.cta-card-text {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+.cta-card-text h4 {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.cta-card-text p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+}
+
+.cta-card-end {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.cta-card-end svg {
+  width: 22px;
+  height: 22px;
+  fill: #fff;
+}
